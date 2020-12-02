@@ -1,36 +1,36 @@
 import os
 
-arr = open(os.path.join(os.getcwd(), "day_1_input.txt"), "r").read().split('\n')
-print("List has {} elements".format(len(arr)))
+day1_arr = open(os.path.join(os.getcwd(), "day_1_input.txt"), "r").read().split('\n')
+print("List has {} elements".format(len(day1_arr)))
 
 def day1_part1():
-    for item in arr:
+    for item in day1_arr:
         i = 0
-        while i < len(arr):
-            sum = int(item) + int(arr[i])
+        while i < len(day1_arr):
+            sum = int(item) + int(day1_arr[i])
             if sum == 2020:
-                product = int(item) * int(arr[i])
+                product = int(item) * int(day1_arr[i])
                 print(
                     "The two elements that have a sum of 2020 in this array are {} and {} with their product being {}".format(
                         item,
-                        arr[i],
+                        day1_arr[i],
                         product))
                 return product
             i = i + 1
 
 def day1_part2():
-    for item in arr:
+    for item in day1_arr:
         indexA = 0
-        while indexA < len(arr):
+        while indexA < len(day1_arr):
             indexB = 0
-            while indexB < len(arr):
-                sum = int(item) + int(arr[indexA]) + int(arr[indexB])
+            while indexB < len(day1_arr):
+                sum = int(item) + int(day1_arr[indexA]) + int(day1_arr[indexB])
                 if sum == 2020:
-                    product = int(item) * int(arr[indexA]) * int(arr[indexB])
+                    product = int(item) * int(day1_arr[indexA]) * int(day1_arr[indexB])
                     print("The three elements that have a sum of 2020 in this array are {}, {} and {} with a product of {}".format(
                         item,
-                        arr[indexA],
-                        arr[indexB],
+                        day1_arr[indexA],
+                        day1_arr[indexB],
                         product
                     ))
                     return product
