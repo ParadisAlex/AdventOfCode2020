@@ -22,9 +22,8 @@ def part2():
         indexes = password.split(':')[0].split(' ')[0]
         index1 = pwd[int(indexes.split('-')[0]) - 1]
         index2 = pwd[int(indexes.split('-')[1]) - 1]
-        if index1 == policy_letter or index2 == policy_letter:
-            if index1 != index2:
-                valid_passwords = valid_passwords + 1
+        if (index1 == policy_letter or index2 == policy_letter) and index1 != index2:
+            valid_passwords = valid_passwords + 1
     return valid_passwords
 
 print("Part one answer: {}".format(part1()))
